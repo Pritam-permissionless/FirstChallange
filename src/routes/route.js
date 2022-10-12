@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const comment = require('../controller/commentController')
+const filter = require('../controller/filterController')
 
 
 
@@ -13,6 +14,8 @@ router.get('/getThings',function(req, res){
 
 
 router.post('/comment',comment.comment)
+
+router.get('/filter', filter.filter)
 
 
 
